@@ -1,16 +1,26 @@
 <template>
-  <div>
-    <router-link to="/">Home</router-link>
-  </div>
-  <router-view/>
+  <router-view />
 </template>
 
 <style lang="stylus">
+html 
+  background #f8f8f8
+
+*
+  margin 0
+  padding 0
+  text-decoration none
+
 #app
   font-family Avenir, Helvetica, Arial, sans-serif
   -webkit-font-smoothing antialiased
   -moz-osx-font-smoothing grayscale
   text-align center
   color #2c3e50
-  margin-top 60px
+  margin 1rem auto
+  padding 0
+
+ul
+  margin 0 auto
+  padding 0
 </style>
