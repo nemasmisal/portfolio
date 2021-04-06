@@ -6,7 +6,6 @@
     </h2>
     <div class="underline"></div>
     <h3>Full-Stack Developer</h3>
-
     <SkillsList />
   </div>
 </template>
@@ -35,5 +34,4 @@ h2
   border-radius 100%
 .box
   display inline-block
-
 </style>

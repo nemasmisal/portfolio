@@ -192,7 +192,7 @@ ul
   transform translateX(0%)
 .pacman-enter-active,
 .pacman-leave-active
-  animation eating 3s ease
+  animation eating 2s ease
 
 @keyframes eating 
   0% {
