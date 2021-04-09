@@ -9,9 +9,8 @@
       </transition>
       <transition name="right" appear>
         <li>
-          <div class="right">
-            <router-link to>Back-End</router-link>
-          </div>
+          <router-link to>Back-End</router-link>
+          <div class="right"></div>
         </li>
       </transition>
       <transition name="right" appear>
@@ -63,7 +62,7 @@ li
   text-align center
   position relative
 ul
-  height 650px
+  max-height 650px
   overflow hidden
   li:nth-child(2)
     top -108px
@@ -72,13 +71,13 @@ ul
     overflow hidden
     position relative
     top -100px 
-    width 90%
+    width 100%
+    max-width 340px
     box-shadow none
     > a
       position absolute
       top 50px
-      left 10px
-      width 100% 
+      right 25%
   li:nth-child(4)
     overflow hidden
     width 90%
@@ -96,20 +95,16 @@ ul
   li:last-child
     top -225px
 .left
-  width 105px
   border-top 100px solid #f00
   border-right 100px solid transparent
   line-height 20px
   position relative
-  right -6px
   padding-top 10px
   z-index 2
 .right
-  width 105px
   border-bottom 100px solid #f00
   border-left 100px solid transparent
   position relative
-  left -50px
   line-height 24px
   padding-bottom 5px
   z-index 1
@@ -119,7 +114,7 @@ ul
   overflow hidden
   margin 0 auto
   position relative
-  right 70px
+  right 80px
   &:before
     content ""
     display block

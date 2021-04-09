@@ -1,7 +1,19 @@
 <template>
   <div class="footer">
-    <button class="button">Send Me Message</button>
-    <div class="container">
+    <div class="contacts">
+      <button class="button" @click="handleFormVisibility">Send Me Message</button>
+      <a href="https://linkedin.com/in/nikolay-topalov" target="_blank">
+        <img src="@/assets/linkedin.svg" />
+      </a>
+      <a href="https://github.com/nemasmisal" target="_blank">
+        <img src="@/assets/github.svg" />
+      </a>
+      <a href="mailto:nikolay@nemasmisal.online?subject=QFPW:">
+        <img src="@/assets/mail.svg" />
+      </a>
+    </div>
+    <div class="form-container" v-if="isFormVissible">
+      <button class="close" @click="handleFormVisibility">x</button>
       <form @submit.prevent="sendMsg">
         <input type="text" v-model="v$.form.name.$model" placeholder="Name" />
         <div
@@ -43,6 +55,9 @@ import { computed, ref } from 'vue'
 export default {
   name: 'Footer',
   setup() {
+    const isFormVissible = ref(false);
+    const handleFormVisibility = () => isFormVissible.value = !isFormVissible.value;
+
     const form = ref({ name: '', email: '', phone: '', comment: '' });
     const rules = computed(() => ({
       form: {
@@ -58,7 +73,7 @@ export default {
       v$.value.form.$reset();
       //TODO send request with the values
     }
-    return { sendMsg, form, v$ }
+    return { sendMsg, form, v$, isFormVissible, handleFormVisibility }
   }
 }
 </script>
@@ -83,38 +98,50 @@ form
     padding 10px
 
 .button
-  width 180px
+  width 150px
   height 35px
-  border #f00 3px solid
+  border #2c3e50 solid 2px 
   border-radius 35px
   background #fff
-  margin 0 auto
-  position relative
   transition all 1s ease
   outline none
+  vertical-align super
+  font-weight bold
   &:hover
-    width 190px
-    
+    cursor pointer
+    border none 
+    background #f00
+ 
 .footer
   position fixed
-  bottom 0
+  bottom 20px
   left 0
   right 0
   max-width 650px
-  height 2em
-  overflow hidden
   margin 0 auto
-  transition all 1s ease
   z-index 999
-  &:hover
-    height 24.8em
-  &:visited
-    height 10em
 
-.container
+.form-container
   background-color #acacac
   padding-top 5px
   width 100%
+  position absolute 
+  bottom 80px
+  left 0
+  right 0
+  max-width 450px
+  margin 0 auto
+  > .close
+    color red
+    border none
+    background none
+    font-size 20px
+    outline none
+    width 94%
+    text-align right
+    &:hover
+      cursor pointer
+    
 .error
   border 2px solid red
   display block
@@ -124,4 +151,14 @@ form
   text-align center
   width 80%
   max-width 400px
+.contacts
+  > a
+    padding 5px
+    margin 5px
+    display inline-block
+    transition all 1s ease
+    &:hover
+      background #f00
+      border-radius 5%
+
 </style>
