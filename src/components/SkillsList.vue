@@ -4,25 +4,25 @@
       <transition name="left" appear>
         <li>
           <div class="left"></div>
-          <router-link to>Front-End</router-link>
+          <router-link :to="{ name: 'FrontEndList'}">Front-End</router-link>
         </li>
       </transition>
       <transition name="right" appear>
         <li>
-          <router-link to>Back-End</router-link>
+          <router-link :to="{ name: 'BackEndList'}">Back-End</router-link>
           <div class="right"></div>
         </li>
       </transition>
       <transition name="right" appear>
         <li>
           <div class="curved-corner-bottom-left"></div>
-          <router-link to>Clouds and Serverless</router-link>
+          <router-link :to="{ name: 'CloudList'}">Clouds and Serverless</router-link>
         </li>
       </transition>
       <transition name="left" appear>
         <li>
           <div class="curved-corner-top-right"></div>
-          <router-link to>Databases</router-link>
+          <router-link :to="{ name: 'DatabaseList'}">Databases</router-link>
         </li>
       </transition>
       <li>
@@ -32,7 +32,7 @@
       </li>
       <transition name="right" appear>
         <li>
-          <router-link to>Other</router-link>
+          <router-link :to="{ name: 'OtherList'}">Other</router-link>
         </li>
       </transition>
     </ul>
