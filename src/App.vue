@@ -12,8 +12,9 @@ export default {
 }
 </script>
 <style lang="stylus">
-html 
+html, body
   background #f8f8f8
+  height 100%
 
 *
   margin 0
@@ -26,8 +27,9 @@ html
   -moz-osx-font-smoothing grayscale
   text-align center
   color #2c3e50
-  margin 1rem auto
+  margin 0 auto
   padding 0
+  height 100%
 
 ul
   margin 0 auto

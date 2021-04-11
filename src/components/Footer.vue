@@ -102,7 +102,7 @@ form
   height 35px
   border #2c3e50 solid 2px 
   border-radius 35px
-  background #fff
+  background #f8f8f8
   transition all 1s ease
   outline none
   vertical-align super
@@ -114,11 +114,13 @@ form
  
 .footer
   position fixed
-  bottom 20px
+  bottom 0
   left 0
   right 0
-  max-width 650px
+  max-width 100%
+  background #f8f8f8
   margin 0 auto
+  padding 10px 0
   z-index 999
 
 .form-container
