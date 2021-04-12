@@ -7,18 +7,21 @@
     <div class="underline"></div>
     <h3>Full-Stack Developer</h3>
     <SkillsList />
+    <Footer />
   </div>
 </template>
 
 <script>
 import SkillsList from '@/components/SkillsList.vue'
 import BouncingDot from '@/components/BouncingDot.vue'
+import Footer from '@/components/Footer.vue'
 
 export default {
   name: 'Home',
   components: {
     SkillsList,
-    BouncingDot
+    BouncingDot,
+    Footer
   }
 }
 </script>
@@ -29,6 +32,7 @@ h2
   background #f8f8f8
   max-width 650px
   margin 0 auto
+  padding-top 30px
 .underline
   border 2px solid red
   border-radius 100%
