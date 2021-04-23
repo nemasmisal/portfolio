@@ -13,21 +13,24 @@ export default {
         name: 'JavaScript',
         intro: 'Sucessfully grade as JS Web Developer in 2021 at SoftUni Sofia, Bulgaria.',
         imgLinks: ['Front-End/js1.png', 'Front-End/js2.png', 'Front-End/js3.png'],
-        background: '#f7df1e'
+        background: '#f7df1e',
+        link: 'https://to-do-pwa-1882e.web.app/'
       },
       angular: {
         _id: 1,
         name: 'Angular',
         intro: 'In November 2020 sucessfully finish Angular course with excelent grade.',
         imgLinks: ['Front-End/angular1.png', 'Front-End/angular2.png', 'Front-End/angular3.png'],
-        background: '#DD0031'
+        background: '#DD0031',
+        link: 'http://nemasmisal.online:4200'
       },
       vuejs: {
         _id: 2,
         name: 'VueJS',
         intro: 'In January 2021 sucessfully finish VueJS course with excelent grade.',
         imgLinks: ['Front-End/vue1.png', 'Front-End/vue3.png', 'Front-End/vue2.png'],
-        background: '#42b983'
+        background: '#42b983',
+        link: 'http://nemasmisal.online:8080'
       }
     };
     return { stack };

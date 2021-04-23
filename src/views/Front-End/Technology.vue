@@ -2,7 +2,7 @@
   <div class="wrapper" :style="{ background: technology.background }">
     <h1 :style="{ background: technology.background }">{{technology.name}}</h1>
     <p>{{technology.intro}}</p>
-    <h3><a href="">Link</a> to the project</h3>
+    <h3><a :href="technology.link">Link</a> to the project</h3>
     <div class="img-container">
       <img v-for="(img,i) of technology.imgLinks" :key="i" :src="getDynamicImg(img)" />
     </div>
@@ -22,7 +22,7 @@ export default {
 </script>
 <style lang="stylus" scoped>
 .wrapper
-  max-height 976px
+  max-height 1000px
   background red
   position relative
   display block
@@ -48,7 +48,7 @@ ul
   max-width 850px
   margin 0 auto
   padding-bottom 20px
-  max-height 810px
+  max-height 830px
   display grid
   grid-template-columns repeat(auto-fill, minmax(17rem, 1fr))
   align-items center
